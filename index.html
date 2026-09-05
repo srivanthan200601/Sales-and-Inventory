@@ -8,6 +8,34 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>" />
 </head>
 <body>
+  <!-- Login Overlay -->
+  <div id="loginOverlay" class="login-overlay" style="display: none;">
+    <div class="login-card">
+      <div class="brand-header" style="justify-content: center; margin-bottom: 2rem;">
+        <div class="brand-logo" style="width: 48px; height: 48px; font-size: 1.5rem;">R</div>
+        <div>
+          <div class="brand-title" style="font-size: 1.4rem;">Retail Copilot</div>
+          <div class="brand-subtitle">ID: TRACK_DIPHS08</div>
+        </div>
+      </div>
+      <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--text-color);">Sign In</h3>
+      <form id="loginForm">
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">Email Address</label>
+          <input type="email" id="email" required placeholder="manager@apexretail.com" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: white;" value="alex.morgan@apexretail.com">
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">Password</label>
+          <input type="password" id="password" required placeholder="••••••••" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); color: white;" value="Manager@1234">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem;">Sign In</button>
+      </form>
+      <div style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+        <p>Demo accounts (password: Admin@1234, Manager@1234, etc.)</p>
+      </div>
+    </div>
+  </div>
+
   <div id="app">
     <!-- Navigation Sidebar -->
     <aside class="sidebar">
@@ -90,6 +118,7 @@
   </div>
 
   <!-- JavaScript Modules -->
+  <script src="auth.js"></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
   <script src="pos.js"></script>

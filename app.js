@@ -203,6 +203,10 @@
 
   // Handle Navigation clicks
   document.addEventListener("DOMContentLoaded", () => {
+    if (window.Auth) {
+      window.Auth.init();
+    }
+
     document.querySelectorAll(".nav-item").forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
